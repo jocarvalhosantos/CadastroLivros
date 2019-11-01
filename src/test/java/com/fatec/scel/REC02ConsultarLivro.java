@@ -23,5 +23,10 @@ public class REC02ConsultarLivro {
 		repository.save(livro);
 		Livro ro = repository.findByIsbn("3333");
 		assertThat(ro.getTitulo()).isEqualTo(livro.getTitulo());
+		assertThat(ro.getAutor()).isEqualTo(livro.getAutor());
+		assertThat(ro.getId()).isEqualTo(livro.getId());
+		assertThat(ro.getIsbn()).isEqualTo(livro.getIsbn());
+		
+		
 	}
 }
